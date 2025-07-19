@@ -1,0 +1,140 @@
+.portfolio {
+  padding: 100px 50px;
+  background: #14142b;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-title span {
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px;
+  justify-content: center;
+}
+
+.portfolio-card {
+  width: 350px;
+  background-color: #1e1e3f;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  background-color: #1d0560f8;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.portfolio-card h3 {
+  margin: 15px;
+  font-size: 1.2rem;
+}
+
+.portfolio-card p {
+  margin: 0 15px 10px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin: 0 15px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  color: white;
+}
+
+.purple { background: #6c63ff; }
+.pink { background: #fc5c7d; }
+.yellow { background: #f1c40f; color: #000; }
+.orange { background: #e67e22; }
+.red { background: #e74c3c; }
+
+.view-btn-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn.view-projects {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #6c63ff;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn.view-projects:hover {
+  background: linear-gradient(to right, #ff33cc, #5c5cff);
+  transform: scale(1.05);
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* ✅ Responsive Styling */
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .portfolio-grid {
+    gap: 40px;
+  }
+
+  .portfolio-card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .portfolio-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-card p {
+    font-size: 0.85rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+  }
+
+  .btn.view-projects {
+    width: 100%;
+    max-width: 250px;
+  }
+}

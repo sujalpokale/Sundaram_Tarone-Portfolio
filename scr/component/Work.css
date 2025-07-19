@@ -1,0 +1,318 @@
+/* ========== BASE STYLES ========== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+/* Common dark gradient background for consistency */
+.common-dark-bg {
+  background: linear-gradient(to right, #1a1a2e, #0f0c29);
+  color: white;
+}
+
+/* Apply this class to all 3 sections */
+.work-section,
+.featured-film-section,
+.youtube-section,
+.footer-section {
+  @extend .common-dark-bg; /* If using SCSS */
+  background: linear-gradient(to right, #1a1a2e, #0f0c29); /* Use directly in plain CSS */
+}
+
+/* WORK SECTION */
+.work-section {
+  padding: 100px 50px;
+  background: linear-gradient(to right, #1a1a2e, #0f0c29);
+  color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-title span {
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section-subtitle {
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.work-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.work-card {
+  background-color: #2d2d54;
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.work-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.work-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.work-card:hover {
+  transform: scale(1.05);
+}
+
+/* ========== FEATURED FILM ========== */
+.featured-film-section {
+  padding: 100px 30px;
+  background-color: #0f0c29;
+  color: white;
+  text-align: center;
+}
+
+.featured-title {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+}
+
+.featured-title span {
+  color: #cc66ff;
+  border-bottom: 2px solid #cc66ff;
+}
+
+.film-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #13132d;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 0 20px 5px #892be24a;
+  gap: 40px;
+}
+
+.video-wrapper {
+  flex: 1;
+  max-width: 500px;
+}
+
+.video-wrapper iframe {
+  width: 125%;
+  height: 400px;
+  border-radius: 12px;
+  border: none;
+}
+
+.film-info {
+  flex: 1;
+  max-width: 550px;
+  text-align: left;
+}
+
+.film-info h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.film-info h3 span {
+  color: #ff66cc;
+}
+
+.badge {
+  background-color: #3e3e6b;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.film-info p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tags {
+  margin-bottom: 20px;
+}
+
+.tags span {
+  background-color: #2a2a4d;
+  color: #ffccff;
+  padding: 6px 12px;
+  border-radius: 12px;
+  margin: 4px 8px 4px 0;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.tech-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 10px 20px;
+}
+
+.tech-info p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* ========== YOUTUBE SECTION ========== */
+.youtube-section {
+  background-color: #0f0c29;
+  padding: 80px 30px;
+  text-align: center;
+  color: white;
+}
+
+.youtube-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.youtube-title span {
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  border-bottom: 2px solid #cc66ff;
+}
+
+.youtube-videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 50px;
+}
+
+.youtube-card {
+  background-color: #13132d;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 350px;
+  box-shadow: 0 0 20px 5px #892be24a;
+  transition: transform 0.3s ease;
+}
+
+.youtube-card:hover {
+  transform: scale(1.05);
+}
+
+.youtube-card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.youtube-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.youtube-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.youtube-button-wrapper {
+  text-align: center;
+}
+
+.youtube-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(to right, #ff00cc, #ff6600);
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.youtube-button:hover {
+  transform: scale(1.05);
+}
+
+/* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
+@media (max-width: 1024px) {
+  .film-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .film-info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .video-wrapper {
+    max-width: 100%;
+  }
+
+  .tech-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title,
+  .featured-title,
+  .youtube-title {
+    font-size: 2rem;
+  }
+
+  .work-section,
+  .featured-film-section,
+  .youtube-section {
+    padding: 60px 20px;
+  }
+
+  .work-cards,
+  .youtube-videos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .film-container {
+    padding: 30px 20px;
+  }
+
+  .film-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .video-wrapper iframe {
+    height: 250px;
+    padding: 10;
+    width: 350px;
+  }
+
+  .youtube-card iframe {
+    height: 180px;
+  }
+}

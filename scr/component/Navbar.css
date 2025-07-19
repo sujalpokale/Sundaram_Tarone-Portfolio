@@ -1,0 +1,140 @@
+/* ---------- Navbar Base Styling ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  position: fixed;
+  top: 0;
+  width: 95%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.highlight {
+  background: linear-gradient(to right, purple, orange);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links li {
+  margin: 0;
+}
+.mobile_work {
+  display: not-allowed;
+}
+.nav-btn {
+  background: none;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: color 0.2s ease;
+}
+
+.nav-btn:hover {
+  transform: scale(1.25);
+  border: 1px solid transparent;
+}
+
+.work-btn {
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.work-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ff33cc, #5c5cff);
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.6);
+  transition: background 0.3s ease;
+}
+
+/* ---------- Hamburger Button ---------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ---------- Mobile View Styling ---------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    padding: 10px;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #13132d;
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .nav-btn, .work-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

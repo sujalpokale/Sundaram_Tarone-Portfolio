@@ -1,0 +1,166 @@
+.contact-section {
+  padding: 100px 50px;
+  background-color: #0f0c29;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.section-title span {
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.info-block {
+  margin-bottom: 20px;
+}
+
+.info-block h4 {
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #1f1f3d;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(88, 85, 85, 0.3);
+}
+
+.contact-form label {
+  font-weight: 500;
+  color: #ccc;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #2d2d54;
+  color: white;
+}
+
+.contact-form button {
+  background: #6c63ff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+  background: #7f75ff;
+}
+
+.success-msg {
+  color: lightgreen;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  gap: 60px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 28px;
+  color: white;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #8888ff;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f0c29;
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 60px;
+  border-top: 1px solid #222;
+}
+
+.footer span {
+  color: red;
+}
+
+/* ✅ Responsive CSS */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-left,
+  .contact-right {
+    max-width: 100%;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .social-icons a {
+    font-size: 30px;
+  }
+
+  .footer {
+    font-size: 0.85rem;
+    margin-top: 40px;
+  }
+}
