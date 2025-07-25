@@ -1,0 +1,147 @@
+.video-card-container {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin: auto;
+}
+.video-card-container:hover {
+  transform: scale(1.05);
+}
+
+/* Glowing gradient border */
+.glow-border {
+  position: absolute;
+  inset: -4px;
+  border-radius: 0.75rem;
+  filter: blur(12px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.video-card-container:hover .glow-border {
+  opacity: 1;
+}
+
+/* Video wrapper */
+.video-wrapper {
+  position: relative;
+  background: black;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  height: 700px;
+  width: 100%;
+  display: flex;
+}
+
+/* Video element */
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gradient overlay */
+.video-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent, rgba(0, 0, 0, 0.3));
+}
+
+/* Play button */
+.video-play-button {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.play-btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: rgba(147, 51, 234, 0.8);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+.play-btn:hover {
+  transform: scale(1.1);
+  background-color: #9333ea;
+}
+.play-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  margin-left: 2px;
+}
+
+/* Caption */
+.video-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  color: white;
+}
+.video-caption h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+.video-caption p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* ------------- Responsive ---------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .video-wrapper {
+    height: 600px;
+  }
+
+  .play-btn {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .video-caption h3 {
+    font-size: 1.25rem;
+  }
+
+  .video-caption p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .video-wrapper {
+    height: 500px;
+  }
+
+  .play-btn {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .video-caption {
+    padding: 1rem;
+  }
+
+  .video-caption h3 {
+    font-size: 1rem;
+  }
+
+  .video-caption p {
+    font-size: 0.75rem;
+  }
+}
