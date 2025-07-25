@@ -27,7 +27,7 @@ body {
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
@@ -39,6 +39,7 @@ body {
 
 .section-subtitle {
   color: #ccc;
+  font-size: 1.2rem;
   margin-bottom: 50px;
 }
 
@@ -49,30 +50,7 @@ body {
   gap: 30px;
 }
 
-.work-card {
-  background-color: #2d2d54;
-  padding: 20px;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 300px;
-  text-align: left;
-  transition: transform 0.3s ease;
-}
 
-.work-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.work-card h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.work-card:hover {
-  transform: scale(1.05);
-}
 
 /* ========== FEATURED FILM ========== */
 .featured-film-section {
@@ -94,7 +72,7 @@ body {
 
 .film-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin:  auto;
   background: #13132d;
   border-radius: 20px;
   padding: 40px;
@@ -103,12 +81,13 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   box-shadow: 0 0 20px 5px #892be24a;
-  gap: 40px;
+  gap:20px;
 }
-
 .video-wrapper {
   flex: 1;
-  max-width: 500px;
+  max-width: 600px;
+  max-height: 400px;
+  overflow: hidden;
 }
 
 .video-wrapper iframe {
@@ -174,6 +153,18 @@ body {
 .tech-info p {
   font-size: 0.9rem;
   color: #aaa;
+}
+.reels-container{
+  padding: 80px 30px;
+  text-align: center;
+  color: white;
+}
+.reels-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 50px;
 }
 
 /* ========== YOUTUBE SECTION ========== */
@@ -307,9 +298,10 @@ body {
   }
 
   .video-wrapper iframe {
-    height: 250px;
-    padding: 10;
-    width: 350px;
+    height: 225px;
+    padding: 0;
+    width: 500px;
+    
   }
 
   .youtube-card iframe {
