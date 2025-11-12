@@ -7,7 +7,7 @@ A responsive and modern portfolio website showcasing **Sundaram Tarone** — vid
 ## 🔗 Live Demo
 
 Explore the live website here:  
-https://sundaramtaroneportfolio.netlify.app
+https://sundaramatarone.netlify.app/
 
 ---
 
