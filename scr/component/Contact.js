@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
 import { FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';  // 👈 icons imported
@@ -6,9 +6,16 @@ import { FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';  // 👈 ic
 const Contact = () => {
   const form = useRef();
   const [isSent, setIsSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('igquxE4RWoc2b7b6W');
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs.sendForm(
       'service_e04l94q',
@@ -17,12 +24,17 @@ const Contact = () => {
       'igquxE4RWoc2b7b6W'
     ).then(
       (result) => {
-        console.log(result.text);
+        console.log('Email sent successfully:', result.text);
         setIsSent(true);
+        setIsLoading(false);
         form.current.reset();
+        // Reset success message after 5 seconds
+        setTimeout(() => setIsSent(false), 5000);
       },
       (error) => {
-        console.log(error.text);
+        console.log('Email sending failed:', error);
+        setIsLoading(false);
+        alert('Failed to send message. Please try again or contact directly via email.');
       }
     );
   };
@@ -75,7 +87,9 @@ const Contact = () => {
             <input type="text" name="subject" placeholder="What's this about?" required />
             <label>Your Message *</label>
             <textarea name="message" placeholder="Tell me about your project or idea..." rows="5" required></textarea>
-            <button type="submit">🚀 Send Message</button>
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? '⏳ Sending...' : '🚀 Send Message'}
+            </button>
             {isSent && <p className="success-msg">✅ Message sent successfully!</p>}
           </form>
         </div>
